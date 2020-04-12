@@ -47,19 +47,25 @@ fizz: 4 buzz: 3 fizzbuzz: 1 three: 2 integer: 10
 ```
 (Integer is 10 because there were 10 numbers in the output that were not altered).
 
+## Step 4
+
+Wrap this in a RESTful API for a fizzbuzz integer range resource using Spring Boot or any other 
+technology you are familiar with, and create an integration test for a successful run and for an 
+invalid input, for example a string rather than a number.
+
 ## Build
 ```
 mvn clean install
 ```
-## Run application from command line
+## Run application
 ```
-java -jar target/fizzbuzz-1.0-SNAPSHOT-jar-with-dependencies.jar begin end
+curl http://localhost:8080/fizzbuzz/{begin}/{end}
 
 Example:
-java -jar target/fizzbuzz-1.0-SNAPSHOT-jar-with-dependencies.jar 1 20
+curl http://localhost:8080/fizzbuzz/1/20
 ```
 
-## Run unit tests
+## Run tests
 ```
 mvn test
 ```

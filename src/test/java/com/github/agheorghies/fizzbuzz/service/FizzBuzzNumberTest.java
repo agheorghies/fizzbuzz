@@ -1,12 +1,13 @@
-package com.github.agheorghies.fizzbuzz;
+package com.github.agheorghies.fizzbuzz.service;
 
+import com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber;
 import org.junit.Test;
 
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.THREE;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.BUZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.FIZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.FIZZ_BUZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.INTEGER;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.THREE;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.BUZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.FIZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.FIZZ_BUZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.INTEGER;
 import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzNumberTest {

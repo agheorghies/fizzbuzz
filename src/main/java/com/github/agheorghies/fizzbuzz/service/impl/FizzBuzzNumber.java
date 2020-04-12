@@ -1,4 +1,4 @@
-package com.github.agheorghies.fizzbuzz;
+package com.github.agheorghies.fizzbuzz.service.impl;
 
 public class FizzBuzzNumber {
     public static final String FIZZ_BUZZ = "fizzbuzz";

@@ -1,4 +1,4 @@
-package com.github.agheorghies.fizzbuzz;
+package com.github.agheorghies.fizzbuzz.service.impl;
 
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -9,11 +9,11 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.BUZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.FIZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.FIZZ_BUZZ;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.INTEGER;
-import static com.github.agheorghies.fizzbuzz.FizzBuzzNumber.THREE;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.BUZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.FIZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.FIZZ_BUZZ;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.INTEGER;
+import static com.github.agheorghies.fizzbuzz.service.impl.FizzBuzzNumber.THREE;
 
 public class FizzBuzzRange {
 
