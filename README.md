@@ -30,6 +30,23 @@ e.g. running the program with a range from 1-20 should produce the following res
 
 Create a branch for the "three" variation and then a commit with the solution.
 
+## Step 3
+
+Produce a report at the end of the output showing how many times the following were printed:
+```
+fizz
+buzz
+fizzbuzz
+three
+an integer
+```
+e.g. Running the program with a range from 1-20 should produce the following result:
+```
+1 2 three 4 buzz fizz 7 8 fizz buzz 11 fizz three 14 fizzbuzz 16 17 fizz 19 buzz
+fizz: 4 buzz: 3 fizzbuzz: 1 three: 2 integer: 10
+```
+(Integer is 10 because there were 10 numbers in the output that were not altered).
+
 ## Build
 ```
 mvn clean install

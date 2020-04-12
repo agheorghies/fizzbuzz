@@ -1,16 +1,21 @@
 package com.github.agheorghies.fizzbuzz;
 
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-public class FizzBuzz {
+public class FizzBuzzNumber {
     public static final String FIZZ_BUZZ = "fizzbuzz";
     public static final String FIZZ = "fizz";
     public static final String BUZZ = "buzz";
     public static final String THREE = "three";
-    public static final String DELIMITER = " ";
+    public static final String INTEGER = "integer";
 
     public static String mapNumber(int number) {
+        return map(number, false);
+    }
+
+    public static String mapGroup(int number) {
+        return map(number, true);
+    }
+
+    private static String map(int number, boolean toGroup) {
         String value = String.valueOf(number);
 
         if (value.contains("3")) {
@@ -29,17 +34,10 @@ public class FizzBuzz {
             return BUZZ;
         }
 
-        return value;
-    }
-
-    public static String mapRange(int begin, int end) {
-        if (begin > end) {
-            return "";
+        if (toGroup) {
+            return INTEGER;
         }
 
-        return IntStream
-                .rangeClosed(begin, end)
-                .mapToObj(FizzBuzz::mapNumber)
-                .collect(Collectors.joining(DELIMITER));
+        return value;
     }
 }

@@ -27,8 +27,9 @@ public class Application {
             int begin = parseIntArgument(args[0], BEGIN_ARGUMENT);
             int end  = parseIntArgument(args[1], END_ARGUMENT);
 
-            System.out.println(FizzBuzz.mapRange(begin,end));
-
+            FizzBuzzRange fizzBuzzRange = new FizzBuzzRange();
+            fizzBuzzRange.printRange(begin, end, System.out);
+            fizzBuzzRange.printReport(begin, end, System.out);
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
             printUsage();
