@@ -53,9 +53,15 @@ Wrap this in a RESTful API for a fizzbuzz integer range resource using Spring Bo
 technology you are familiar with, and create an integration test for a successful run and for an 
 invalid input, for example a string rather than a number.
 
+## Step 5
+      
+Create a docker image with your REST API server and launch a container, then execute the same integration test as in Step 4.
+   
 ## Build
 ```
-mvn clean install
+mvn package
+docker build -t fizzbuzz .
+docker run --rm -it -p8080:8080 fizzbuzz
 ```
 ## Run application
 ```
