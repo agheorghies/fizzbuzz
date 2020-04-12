@@ -5,9 +5,17 @@ import org.junit.Test;
 import static com.github.agheorghies.fizzbuzz.FizzBuzz.BUZZ;
 import static com.github.agheorghies.fizzbuzz.FizzBuzz.FIZZ;
 import static com.github.agheorghies.fizzbuzz.FizzBuzz.FIZZ_BUZZ;
+import static com.github.agheorghies.fizzbuzz.FizzBuzz.THREE;
 import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
+
+    @Test
+    public void testMapNumber_whenContains3_expectThree() {
+        assertEquals(FizzBuzz.mapNumber(-3), THREE);
+        assertEquals(FizzBuzz.mapNumber(13), THREE);
+        assertEquals(FizzBuzz.mapNumber(131), THREE);
+    }
 
     @Test
     public void testMapNumber_whenMultipleOf15_expectFizzbuzz() {
@@ -18,8 +26,7 @@ public class FizzBuzzTest {
 
     @Test
     public void testMapNumber_whenMultipleOf3_expectFizz() {
-        assertEquals(FizzBuzz.mapNumber(-3), FIZZ);
-        assertEquals(FizzBuzz.mapNumber(3), FIZZ);
+        assertEquals(FizzBuzz.mapNumber(-12), FIZZ);
         assertEquals(FizzBuzz.mapNumber(9), FIZZ);
     }
 
@@ -42,6 +49,6 @@ public class FizzBuzzTest {
 
     @Test
     public void testMapRange_whenRangeIsCorrect() {
-        assertEquals(FizzBuzz.mapRange(0, 6), "fizzbuzz 1 2 fizz 4 buzz fizz");
+        assertEquals(FizzBuzz.mapRange(0, 6), "fizzbuzz 1 2 three 4 buzz fizz");
     }
 }

@@ -18,6 +18,18 @@ e.g. running the program with a range from 1-20 should produce the following res
 
 Init a local git repository and create a commit with the solution.
 
+## Step 2
+
+Please enhance your existing FizzBuzz solution to perform the following:
+
+If the number contains a three you must output the text ‘three’, any other rule is skipped.
+e.g. running the program with a range from 1-20 should produce the following result:
+```
+1 2 three 4 buzz fizz 7 8 fizz buzz 11 fizz three 14 fizzbuzz 16 17 fizz 19 buzz
+```
+
+Create a branch for the "three" variation and then a commit with the solution.
+
 ## Build
 ```
 mvn clean install
