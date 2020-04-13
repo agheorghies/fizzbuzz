@@ -59,10 +59,10 @@ mvn clean install
 ```
 ## Run application
 ```
-curl http://localhost:8080/fizzbuzz/{begin}/{end}
+curl 'http://localhost:8080/fizzbuzz?begin=?&end=?'
 
 Example:
-curl http://localhost:8080/fizzbuzz/1/20
+curl 'http://localhost:8080/fizzbuzz?begin=1&end=20'
 ```
 
 ## Run tests

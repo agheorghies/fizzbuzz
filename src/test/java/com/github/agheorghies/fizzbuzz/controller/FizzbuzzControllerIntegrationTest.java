@@ -23,7 +23,7 @@ public class FizzbuzzControllerIntegrationTest {
 
     @Test
     public void testGetFizzbuzzForRange_withValidParameters() throws Exception {
-        String url = "/fizzbuzz/0/6";
+        String url = "/fizzbuzz?begin=0&end=6";
 
         mockMvc.perform(get(url))
                 .andExpect(status().isOk())
@@ -32,10 +32,19 @@ public class FizzbuzzControllerIntegrationTest {
 
     @Test
     public void testGetFizzbuzzForRange_withInvalidParameters() throws Exception {
-        String url = "/fizzbuzz/0/abc";
+        String url = "/fizzbuzz?begin=0&end=abc";
 
         mockMvc.perform(get(url))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string(containsString("{\"error\":\"For input string: \\\"abc\\\" - expected integer value\"}")));
+    }
+
+    @Test
+    public void testGetFizzbuzzForRange_withMissingParameters() throws Exception {
+        String url = "/fizzbuzz?end=3";
+
+        mockMvc.perform(get(url))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().string(containsString("{\"error\":\"Required Integer parameter 'begin' is not present\"}")));
     }
 }
