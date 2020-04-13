@@ -22,6 +22,11 @@ public class ResponseExceptionHandler {
         return handleRuntimeException(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler({NullPointerException.class})
+    public ResponseEntity<Object> handleMissingServletRequestParameterException(NullPointerException e) {
+        return handleRuntimeException("Missing expected parameters", HttpStatus.BAD_REQUEST);
+    }
+
     private ResponseEntity<Object> handleRuntimeException(String errMessage, HttpStatus status) {
         Map<String, Object> response = new HashMap<>();
         response.put("error", errMessage);
